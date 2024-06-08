@@ -9,8 +9,8 @@ import '../providers/dio_provider.dart';
 final tarotRepositoryProvider = Provider(TarotRepository.new);
 
 class TarotRepository {
-
   TarotRepository(this._ref);
+
   final Ref _ref;
 
   Dio get _dio => _ref.read(dioProvider);
@@ -32,8 +32,7 @@ class TarotRepository {
     }
   }
 
-/*
-// 11:30
+  //============================// dummy
 
   ///
   Future<void> create(TarotAll tarotAll) async {
@@ -61,5 +60,4 @@ class TarotRepository {
       return Future.error(e.response?.data ?? e.error);
     }
   }
-  */
 }
